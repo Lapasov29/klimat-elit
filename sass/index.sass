@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,300&family=Nunito+Sans:ital,wght@1,200&family=Raleway:wght@300&display=swap")
+
+// In General
+
+$transition: .3s
+
+::selection 
+    background-color: #09aeb8
+    color: #fff
+
+::-webkit-scrollbar
+    width: 5px
+    background-color: transparent
+
+::-webkit-scrollbar-thumb
+    background-color: #09aeb8
+
+body 
+    font-family: 'Raleway', sans-serif
+
+li
+    list-style: none
+
+a
+    text-decoration: none
+
+p
+    color: #87868a
+.btn 
+    border-radius: 0% !important
+    &-primary
+        background-color: #ffd763
+        border-color: #ffd763
+        &:hover
+            background-color: #09aeb8
+            border-color: #09aeb8
+        &:focus
+            background-color: #09aeb8
+            border-color: #09aeb8
+
+.active
+    transform: translateY(0) !important
+
+.container
+    position: relative
+
+
+#callUp
+    display: none
+    position: fixed
+    right: 30px
+    bottom: 20px
+    z-index: 999 !important
+    #callFill
+        box-shadow: 0 0 0 0 rgba(9, 175, 184, 0.486)
+        border-radius: 50%
+        animation: zoom 1.5s infinite ease-in-out
+        border-radius: 50%
+        #callId
+            background-color: #09aeb8
+            width: 60px
+            height: 60px
+            border-radius: 50%
+            i
+                color: #fff
+                font-size: 1.4rem
+                animation: callUp 1.5s infinite ease-in-out
+
+// Sections
+
+section
+    min-width: 100%
+    min-height: 100vh
+
+// About
+
+#about
+    .container
+        .row
+            .col-md-6
+                &:nth-child(1)  
+                    position: relative !important
+                    &::before, 
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 47px
+                        height: 47px
+                        z-index: -1 
+                        transition: $transition
+                    &::before
+                        content: ""
+                        top: -10px
+                        left: 0px
+                        background-color: #ffd763    
+                    &::after
+                        content: ""
+                        bottom: -10px
+                        right: 0px
+                        background-color: #09aeb8 
+                &:nth-child(2)
+                    h5
+                        padding-bottom: 20px
+                        &::before
+                            content: ""
+                            display: block
+                            width: 40px
+                            height: 2px
+                            background-color: #09aeb8
+                            margin-bottom: 20px
+                    h3
+                        padding-bottom: 30px
+                    button,
+                    p
+                        font-weight: bold
+.optional-cards
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 100px
+    .optional-card
+        border-left: 2px solid #fff
+        flex: 1 0 20%
+        background-color: #09aeb8
+        transition: $transition
+        width: 150px
+        height: 190px
+        padding: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        &:hover
+            transform: translateY(-30px)
+            background-color: #ffd763
+            color: #38373c
+        &-inside
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            text-align: center
+            i
+                font-size: 3rem
+                color: #fff
+            p
+                color: #fff
+                font-size: 20px
+// end of About
+
+// Services
+
+#services
+    background-color: #f1f1f1
+    .service-cards
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-bottom: 50px
+        .service-card
+            width: 340px
+            height: 460px
+            background-color: #fff
+            padding: 10px
+            display: flex
+            &-inside
+                display: flex
+                justify-content: space-between
+                align-items: center
+                flex-direction: column
+                text-align: center
+                width: auto
+                height: auto
+                position: relative
+                &::after
+                    content: ""
+                    position: absolute
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    background-color: rgba(0, 0, 0, 0.39)
+                    transition: $transition
+                    visibility: hidden
+                    opacity: 0
+                &:hover
+                    &::after
+                        content: ""
+                        visibility: visible
+                        opacity: 1
+                    .service-card-footer
+                        background-color: #ffd763
+                        p
+                            color: #fff
+                    h3
+                        color: #ffd763
+                p
+                    font-weight: bold
+                h3
+                    transition: $transition 
+                    font-weight: bold
+                    z-index: 99 !important
+                .service-card-img
+                    position: relative
+                    .icon-box
+                        width: 70px
+                        height: 70px
+                        position: absolute
+                        bottom: 0
+                        left: 0
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        background-color: #fff
+                        z-index: 99 !important
+                        i
+                            font-size: 2.3rem
+                .service-card-footer
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 100%
+                    height: 55px
+                    background-color: #f1f1f1
+                    cursor: pointer
+                    transition: $transition
+                    z-index: 99 !important
+                    p
+                        text-align: center
+                        margin: 0rem
+                        transition: $transition
+// end of Services
+
+// Contact
+
+#extra
+    .container
+        .row
+            .col-md-4
+                h1
+                    font-size: 5rem !important
+                    color: #09aeb8
+                p
+                    font-weight: bold
+                &:nth-child(2)
+                    border-left: 2px solid #f1f1f1
+                    border-right: 2px solid #f1f1f1
+
+.gallery-cards
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    .gallery-card
+        flex: 1
+        overflow: hidden
+        position: relative
+        .inf-overlay
+            position: absolute
+            top: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(9, 175, 184, 0.651)
+            transition: $transition
+            visibility: hidden
+            opacity: 0
+            transform: scale(.6)
+            transition: $transition ease
+            padding: 30px
+            height: 100%
+        &:hover
+            .inf-overlay
+                visibility: visible
+                opacity: 1
+                transform: scale(1)
+        .btn
+            position: absolute
+            bottom: 15px
+            right: 15px
+            border-radius: 50% !important
+        h3
+            font-weight: bold
+            color: #fff
+        img
+            display: block
+            object-fit: cover 
+
+.input-fill
+    padding: 50px 0px 0px 30px
+    h4
+        font-weight: bold
+        padding-bottom: 20px
+        &::before
+            content: "" 
+            display: block
+            width: 40px
+            height: 2px
+            background-color: #09aeb8
+            margin-bottom: 20px
+
+.input-group, 
+.form-floating,
+label
+    padding: 20px 20px 0px 20px
+    input
+        border-radius: 0% !important
+        padding: 15px !important
+    
+form
+    .btn
+        margin: 20px 20px 0px 20px
+
+// end of Contact
+
+// Navbar
+
+nav
+    &:nth-child(1)
+        height: 70px
+        border-bottom: 2px solid #f1f1f1
+    .social-icons
+        li
+            a
+                i
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 35px
+                    height: 35px
+                    background-color: #f1f1f1
+                    color: #38373c
+                    margin: 0px 5px
+                    border-radius: 50%
+                    transition: $transition 
+                    cursor: pointer
+                    &:hover
+                        transform: rotate(360deg)
+                        background-color: #ffd763
+    .optional-icons
+        li
+            margin: 0px 7px
+            display: flex
+            justify-content: center
+            a
+                i
+                    font-size: 19px
+                    margin-right: 5px
+            span
+                font-weight: bold
+            a
+                &:nth-child(1)
+                    color: #09aeb8
+                &:nth-child(3)
+                    color: #87868a 
+                    &:hover
+                        color: #09aeb8
+    #menu-open,
+    #menu-close
+        display: none
+        cursor: pointer
+
+    #menu-close
+        position: fixed
+        top: 20px
+        right: 20px
+
+    &:nth-child(2)
+        width: 100% !important
+        background-color: #f1f1f1
+        height: 80px
+        position: relative
+        ul
+            margin: 0 auto !important
+            li
+                margin: 0px 50px 0px 0px
+                &:nth-child(5)
+                    position: absolute
+                    margin: 0px 0px 0px 0px
+                    right: 0%
+                a
+                    font-size: 20px 
+                    color: #87868a 
+                    font-weight: bold
+                    &:hover
+                        color: #09aeb8
+
+    .navbar-brand
+        position: relative
+        img
+            position: absolute
+            top: calc( 100% - 50px)
+            left: 0
+            width: 100px
+.swiper 
+    width: 100%
+    height: 100vh
+    .swiper-slide
+        img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+    .swiper-pagination-bullet 
+        width: 15px
+        height: 15px
+
+.fixed-top
+    position: fixed !important
+    animation: Trasform-Down .5s ease
+    background-color: #fff !important
+    box-shadow: 0 0 6px rgba(0, 0, 1, 0.09)
+
+.d-none 
+    display: none !important
+
+#formInput
+    display: none
+    position: absolute
+
+// All the animations
+
+@keyframes Trasform-Down
+    from
+        transform: translateY(-60px)
+    to
+        transform: translateY(0px)
+
+@keyframes color-up 
+    50% 
+        background-color: rgba(255, 255, 255, 0.479)
+        
+    
+@keyframes effect 
+    0% 
+        width: 60px
+        height: 60px
+    90%
+        width: 90px
+        height: 90px
+    100% 
+        transform: rotate(360deg)
+
+@keyframes callUp
+    0%
+        transform: rotate(0) scale(1) skew(1deg)
+    10%
+        transform: rotate(-25deg) scale(1) skew(1deg)
+    20%
+        transform: rotate(25deg) scale(1) skew(1deg)
+    30%
+        transform: rotate(-25deg) scale(1) skew(1deg)
+    40%
+        transform: rotate(25deg) scale(1) skew(1deg)
+    50% 
+        transform: rotate(0) scale(1) skew(1deg)
+    100%
+        transform: rotate(0) scale(1) skew(1deg)
+
+@keyframes zoom
+    0% 
+        transform: scale(.9)
+    70%
+        transform: scale(1)
+        box-shadow: 0 0 0 15px transparent
+    100% 
+        transform: scale(.9)
+        box-shadow: 0 0 0 0 transparent
+// All the media-quires
+
+@media screen and (max-width: 995px) 
+    .nav-f
+        height: auto !important
+        ul
+            width: 100%
+            justify-content: center !important
+            flex-wrap: wrap
+    #menu-open,
+    #menu-close
+            display: block !important
+
+    #menu-open
+        font-size: 1.6rem
+        
+    #menu-close
+        font-size: 1.8rem
+
+    .nav-s
+        height: 60px !important
+        ul
+            flex-direction: column
+            justify-content: space-evenly
+            height: 100vh
+            position: fixed
+            background: white
+            width: 100%
+            z-index: 99 !important
+            padding: 0rem
+            top: 0
+            left: 0
+            right: 0
+            transform: translateY(-100%)
+            transition: .5s ease-out
+            li
+                margin: 0px  !important
+                &:nth-child(5)
+                    position: relative !important
+    .nav-s-active
+        visibility: visible
+        opacity: 1
+
+    .optional-cards
+        flex-direction: column
+        .optional-card
+            margin-top: 10px
+
+    #services
+    .service-cards
+        flex-wrap: wrap
+        justify-content: center !important
+        .service-card
+            margin-bottom: 20px
+
+    .gallery-cards 
+        align-items: center
+        flex-direction: column
+        .gallery-card
+            margin-bottom: 10px
+
+    #contact 
+        .container 
+            .row 
+                .col-md-4:nth-child(2) 
+                    border-left: none
+                    border-right: none
+                    border-top: 2px solid #f1f1f1
+                    border-bottom: 2px solid #f1f1f1
+
+    #about 
+        .container 
+            .row 
+                .col-md-6:nth-child(1) 
+                    &::before
+                        content: ""
+                        top: -5px
+                        left: 5px
+                        background-color: #ffd763    
+                    &::after
+                        bottom: -5px
+                        right: 5px
+                .col-md-6:nth-child(2) 
+                    h5 
+                        padding: 20px 0px
+    
+    form
+        .btn
+            margin-bottom: 90px
+
+    .navbar-brand
+        position: relative
+        img
+            position: absolute
+            top: -35px !important
+            width: 70px !important
+
+@media screen and (max-width: 995px) 
+    .optional-cards
+        .optional-card
+            width: 100%
+    #callUp
+        display: block 
+        #callId
+            display: flex 
+            justify-content: center
+            align-items: center
+        
+    #formInput
+        display: block
+        right: 45px
