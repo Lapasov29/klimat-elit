@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <title>AI Company</title>
+    <title>Klimat-Elit</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg nav-f">
@@ -51,7 +51,8 @@
                     </a>
                     <span>Телефон:&nbsp;</span>
                     <a href="tel:+998 99 393 88 85">+998 99 393 88 85</a>
-                    <a href="tel:+998 97 742 72 72" style="margin-left: 10px; color: #87868a;">+998 97 742 72 72</a>
+                    &nbsp;&nbsp;
+                    <a href="tel:+998 97 742 72 72">+998 97 742 72 72</a>
                 </li>
             </ul>
         </div>
@@ -93,7 +94,7 @@
                 <i class="fa-solid fa-bars"></i>
             </span>
             <span id="formInput">
-                <a href="#contact" class="btn btn-primary btn-lg text-white">Форма</a>
+                <a href="#" class="btn btn-primary btn-lg text-white" id="modalBtn">Форма</a>
             </span>
         </div>
     </nav>
@@ -106,6 +107,22 @@
             </div>
        </div>
     </span>
+    <div class="modal-content p-0 m-0">
+        <div class="modal-card">
+            <form id="form">
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control me-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Имя" id="fname">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Фамиля" id="lname">
+                  </div>
+                <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Номер телефона" id="mnumber">
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary btn-l mb-5">ОТПРАВИТЬ</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <section id="home">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -163,8 +180,8 @@
                         <img src="img/img3.jpg" class="d-block w-100" alt="img">                    
                     </div>
                     <div class="col-md-6">
-                        <h5>KLIMA-ELIT</h5>
-                        <p class="mt-0">Klima-elit ведет свою деятельность на рынке Узбекистана с 2015 года. У нас более 5000 тысяч успешных проектов клиентов.</p>
+                        <h5>KLIMAT-ELIT</h5>
+                        <p class="mt-0">Klimat-elit ведет свою деятельность на рынке Узбекистана с 2015 года. У нас более 5000 тысяч успешных проектов клиентов.</p>
                         <button class="btn btn-primary btn-lg">
                         <a href="#contact" class="text-white">ПОДРОБНО<i class="fa-solid fa-chevron-right"></i>
                         </a></button>
@@ -246,7 +263,7 @@
             <div class="gallery-card">
                 <img src="img/gallery-1.jpg" alt="img">
                 <div class="inf-overlay">
-                    <h3>Услуги по установке</h3>
+                    <h3>Услуги по установкеi</h3>
                     <button class="btn btn-primary">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
@@ -264,7 +281,7 @@
             <div class="gallery-card">
                 <img src="img/gallery-3.jpg" alt="img">
                 <div class="inf-overlay">
-                    <h3>Ремонтные услуги</h3>
+                    <h3>Ремонтные услугиi</h3>
                     <button class="btn btn-primary">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
@@ -316,11 +333,11 @@
                                 </div>
                                <form id="form">
                                 <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control me-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="имя" id="fname">
-                                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="фамилия" id="lname">
+                                    <input type="text" class="form-control me-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Имя" id="fname">
+                                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Фамиля" id="lname">
                                   </div>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="номер телефона" id="mnumber">
+                                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Номер телефона" id="mnumber">
                                 </div>
                                 <div class="d-flex justify-content-end">
                                     <button type="submit" class="btn btn-primary btn-lg">ОТПРАВИТЬ</button>

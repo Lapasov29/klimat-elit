@@ -1,7 +1,8 @@
 let allLinks = document.querySelectorAll("a");
 const navsLinks = document.querySelectorAll(".nav-s ul li");
 const navOpen = document.getElementById("menu-open");
-// const form = document.querySelector("form");
+const modalBtn = document.getElementById("modalBtn");
+const modalContent = document.querySelector(".modal-content");
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -33,3 +34,10 @@ navsLinks.forEach(navLink => {
     })
 })
 
+modalBtn.addEventListener("click", ()=> {
+    modalContent.classList.add("modal-content-active");
+})
+
+document.body.addEventListener("click", (ev) => {
+    ev.target.classList.remove("modal-content-active");
+})
